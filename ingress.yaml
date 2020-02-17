@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  labels:
+    ingress: traefik
+  name: cephadmin
+  namespace: rook-ceph
+spec:
+#  tls:
+#    - hosts:
+#        - ceph-dashboard
+#      secretName: your.domain
+  rules:
+    - host: ceph-dashboard.your.domain
+      http:
+        paths:
+          - path: /ceph-dashboard
+            backend:
+              serviceName: rook-ceph-mgr-dashboard
+              servicePort: 7000
+
