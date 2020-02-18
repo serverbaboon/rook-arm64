@@ -17,7 +17,7 @@ spec:
     - host: ceph-dashboard.your.domain
       http:
         paths:
-          - path: /ceph-dashboard
+          - path: /
             backend:
               serviceName: rook-ceph-mgr-dashboard
               servicePort: 7000
