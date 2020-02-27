@@ -9,6 +9,10 @@ I will look to do a helm version as well.
 Since this is based on my playing with a Raspberry Pi4 k3s cluster I have also added an ingress for a non ssl ceph dashboard served by Traefik. 
 I had trouble getting the Dashboard to work by default, probably due to my ignorance of how to correctly deal with certs in k8s/k3s.
 
+Note these Manifest are only tested on a full 64bit Arm Ubuntu Distribution not Raspbian
+
+https://ubuntu.com/download/server/arm
+
 **THIS IS NOT AN INSTRUCTION HOW TO SETUP A ROOK/CEPH CLUSTER FOLLOW AT YOUR OWN RISK AND CONSULT WITH THE ROOK DOCUMENTATION OR YOU MAY LOSE DATA** 
 This is merely a shortcut to getting around the issue of missing arm64 csi images and may disappear when its no longer an issue.
  
